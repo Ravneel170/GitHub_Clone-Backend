@@ -108,7 +108,10 @@ function startServer() {
 
   mongoose.connect(mongoURI).then(() => console.log('Mongo DB Connected')).catch((err) => console.error('Error connecting to the server:', err));
 
-  app.use(cors({ origin: '*' }));
+ app.use(cors({
+  origin: 'https://main.d2zstnrkg26n37.amplifyapp.com',
+  credentials: true, 
+}));
 
   app.use('/', mainRouter);
 
@@ -156,4 +159,5 @@ function startServer() {
     console.log(`Server is running on port ${port}`)
   })
 };
+
 
