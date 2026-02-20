@@ -123,7 +123,7 @@ function startServer() {
 
     cors: {
 
-      origin: '*',
+      origin: 'https://main.d2zstnrkg26n37.amplifyapp.com',
 
       methods: ["GET", "POST"]
     }
@@ -159,5 +159,6 @@ function startServer() {
     console.log(`Server is running on port ${port}`)
   })
 };
+
 
 
